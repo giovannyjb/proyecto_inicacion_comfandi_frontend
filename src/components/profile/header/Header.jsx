@@ -1,6 +1,6 @@
 import CTA from './CTA';
 import './header.css';
-import IMG from '../../assets/img/gio.png';
+import IMG from '../../../assets/img/gio.png';
 import HeaderSocial from './HeaderSocial';
 
 const Header = ()=>{

@@ -1,6 +1,6 @@
 import React from "react";
 import './about.css'
-import ME from '../../assets/img/bradpit_about_me.jpg'
+import ME from '../../../assets/img/bradpit_about_me.jpg'
 import {FaAward} from 'react-icons/fa'
 import{FaUsers} from 'react-icons/fa'
 import {HiFolder} from 'react-icons/hi'
