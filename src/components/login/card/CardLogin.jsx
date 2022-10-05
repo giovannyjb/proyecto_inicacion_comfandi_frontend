@@ -1,10 +1,12 @@
 import axios from "axios";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useContext } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { ImMail4 } from "react-icons/im";
 import { RiLockPasswordFill } from "react-icons/ri";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import {saveValue,getValue} from '../../../common/storage.js'
+import { AuthContext } from "../../../hooks/useAuth.jsx";
 
 import './card.css'
 const CardLogin = () => {
@@ -13,6 +15,8 @@ const CardLogin = () => {
         password: "",
     });
     const MySwal = withReactContent(Swal)
+    const { signIn, getUser, signOut } = useContext(AuthContext);
+
 
     const handle_submit = () => {
 
@@ -43,7 +47,15 @@ const CardLogin = () => {
                     })
 
                     if (MySwal.clickConfirm){
-                        console.log("ready");
+                        
+                        const obj= {"token":response.data.token,"email":response.data.user.email}
+                        
+                        signIn(obj.email,obj.token)
+                        
+                        console.log("____________");
+                        console.log(getValue("authSession"));
+
+
                     }
                 }
 
