@@ -44,12 +44,14 @@ const Profile = () => {
                 name={infoUser.first_name + " " + infoUser.last_name}
                 job_description={infoUser.about_me.job_description ?? ""}
                 img={"http://127.0.0.1:8000" + infoUser.about_me.img_profile ?? ""}
+                cv = {"http://127.0.0.1:8000" +infoUser.about_me.cv??""}
             />
             <Nav></Nav>
             <About experience={infoUser.about_me.experience ?? ""}
                 clients={infoUser.about_me.clients ?? ""}
                 projects={infoUser.about_me.projects ?? ""}
                 description={infoUser.about_me.description ?? ""}
+                phone = {infoUser.about_me.phone??""}
             />
             <Experience
                 frontend={infoUser.experiences.filter((experience) => experience.type === 0)}

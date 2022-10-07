@@ -14,7 +14,7 @@ const CardLogin = () => {
         password: "",
     });
     const MySwal = withReactContent(Swal)
-    const { signIn, getUser, signOut } = useContext(AuthContext);
+    const { signIn } = useContext(AuthContext);
 
 
     const handle_submit = () => {
@@ -51,11 +51,8 @@ const CardLogin = () => {
 
                         signIn(obj.email, obj.token)
 
-
-
                     }
                 }
-
 
             })
             .catch((error) => {
@@ -71,9 +68,6 @@ const CardLogin = () => {
         },
         [setLogin]
     );
-
-
-
 
     return (
 

@@ -1,6 +1,5 @@
 import CTA from './CTA';
 import './header.css';
-import IMG from '../../../assets/img/gio.png';
 import HeaderSocial from './HeaderSocial';
 
 const Header = (props)=>{
@@ -12,7 +11,7 @@ const Header = (props)=>{
                 <h5>Hello I'm</h5>
                 <h1>{props.name}</h1>
                 <h5 className="text-ligth">{props.job_description}</h5>
-                <CTA></CTA>
+                <CTA cv={props.cv}></CTA>
                 <HeaderSocial></HeaderSocial>
 
                 <div className='me'>

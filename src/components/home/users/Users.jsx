@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import "./users.css";
 import { getValue } from "../../../common/storage";
 import { useState } from "react";
+import ModalUpload from "../modal/Modal";
 
 const Users = () => {
 
@@ -32,6 +33,7 @@ const Users = () => {
 
     return (
         <>
+        <ModalUpload></ModalUpload>
             <section className="sect_users">
                 <div className="cont_users">
                     <div className="cont_search">

@@ -81,6 +81,7 @@
     color: var(--color-primary-variant);
     translate :20px;
     font-weight: bold;
+    
  }
  .card:hover  > .cont_info >p{
     color: var(--color-light);

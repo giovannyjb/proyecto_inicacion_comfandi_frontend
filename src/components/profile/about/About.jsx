@@ -1,9 +1,9 @@
 import React from "react";
 import './about.css'
-import ME from '../../../assets/img/fondo.jpg'
 import {FaAward} from 'react-icons/fa'
 import{FaUsers} from 'react-icons/fa'
 import {HiFolder} from 'react-icons/hi'
+import {BsWhatsapp} from 'react-icons/bs'
 const App = (props) => {
     return (
         <section id="about">
@@ -13,9 +13,9 @@ const App = (props) => {
             <div className="container about__container">
 
                 <div className="about__me">
-                    <div className="about__me-image">
-                        <img src={ME} alt="About image" />
-                    </div>
+                    <a  href={"https://api.whatsapp.com/send?phone="+props.phone}className="about__me-image">
+                        <BsWhatsapp></BsWhatsapp>
+                    </a>
                 </div>
 
 

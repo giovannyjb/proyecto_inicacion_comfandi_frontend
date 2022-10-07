@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import ProtectedRoutes from './hooks/protectedRoutes'
 import { AuthContext } from "./hooks/useAuth"
 import { useContext, useEffect } from 'react';

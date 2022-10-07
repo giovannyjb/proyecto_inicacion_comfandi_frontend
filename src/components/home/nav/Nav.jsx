@@ -1,6 +1,7 @@
 import { FcHome } from 'react-icons/fc'
 import {FiLogOut} from 'react-icons/fi'
 import { useContext, useState } from 'react'
+import {  BsUpload} from 'react-icons/bs'
 
 import './nav.css'
 import { AuthContext } from '../../../hooks/useAuth'
@@ -19,10 +20,16 @@ const Nav = () => {
             </a>
             <a href="#"
                 onClick={() => signOut()}
-                className={activeNav === "#about" ? 'active' : ''}
+          
             >
                <FiLogOut></FiLogOut>
             </a>
+            <a href="#"  data-toggle="modal" data-target="#exampleModal"
+            >
+               <  BsUpload></  BsUpload>
+            </a>
+
+          
 
         </nav>
     )

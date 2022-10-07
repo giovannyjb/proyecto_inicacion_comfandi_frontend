@@ -1,17 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
-import Home from '../views/Home';
+import CardRegister from '../components/register/card/CardRegister';
 import Login from '../views/Login';
-import Profile from '../views/Profile';
+
 
 const RegisterRoutes = () => {
 
 
     return (<>
 
-   
             <Routes>
                  <Route path='/' element={<Login></Login>} /> 
-                 <Route path='/register' element={<h1>Registro</h1>} /> 
+                 <Route path='/register' element={<CardRegister></CardRegister>} /> 
             </Routes>
  
 

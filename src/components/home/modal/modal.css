@@ -1,0 +1,20 @@
+.title{
+   color: var(--color-light);
+   font-weight: bold;
+    margin-right: 10px;
+}
+.cont_inputs{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.cont_inputs >label{
+    font-weight: normal;
+    color: var(--color-primary);
+}
+
+.modalBackG{
+    background:linear-gradient( var(--color-bg-variant), transparent);
+    
+}
