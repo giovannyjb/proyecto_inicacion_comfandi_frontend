@@ -5,7 +5,6 @@ import { ImMail4 } from "react-icons/im";
 import { RiLockPasswordFill } from "react-icons/ri";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
-import {saveValue,getValue} from '../../../common/storage.js'
 import { AuthContext } from "../../../hooks/useAuth.jsx";
 
 import './card.css'
@@ -23,37 +22,35 @@ const CardLogin = () => {
         console.log(login);
         let config = {
             headers: {
-              'Accept': 'application/json',
+                'Accept': 'application/json',
             }
-            }
- 
+        }
 
-        let data = axios.post("http://localhost:8000/api/user/login/", login,config)
+
+        const data = axios.post("http://localhost:8000/api/user/login/", login, config)
             .then((response) => {
                 console.log(response.data);
 
-                if (response.data.errors){
+                if (response.data.errors) {
 
                     MySwal.fire({
-                        icon:'error',
-                        title:'Oops...',
-                        text:'User or password incorrect'
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'User or password incorrect'
                     })
-                }else{
+                } else {
                     MySwal.fire({
-                        icon:'success',
-                        title:'Success',
-                        text:'entering the system'
+                        icon: 'success',
+                        title: 'Success',
+                        text: 'entering the system'
                     })
 
-                    if (MySwal.clickConfirm){
-                        
-                        const obj= {"token":response.data.token,"email":response.data.user.email}
-                        
-                        signIn(obj.email,obj.token)
-                        
-                        console.log("____________");
-                        console.log(getValue("authSession"));
+                    if (MySwal.clickConfirm) {
+
+                        const obj = { "token": response.data.token, "email": response.data.user.email }
+
+                        signIn(obj.email, obj.token)
+
 
 
                     }
@@ -88,11 +85,11 @@ const CardLogin = () => {
                 <div className="login_inputs">
                     <div>
                         <ImMail4 />
-                        <input  placeholder="Email" type="email" required onChange={(e) => { handleChange({ email: e.target.value }) }} />
+                        <input placeholder="Email" type="email" required onChange={(e) => { handleChange({ email: e.target.value }) }} />
                     </div>
                     <div>
                         <RiLockPasswordFill />
-                        <input  placeholder="Password" type="password" required onChange={(e) => { handleChange({ password: e.target.value }) }} />
+                        <input placeholder="Password" type="password" required onChange={(e) => { handleChange({ password: e.target.value }) }} />
                     </div>
 
                 </div>

@@ -1,4 +1,3 @@
-import Login from '../src/views/Login'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ProtectedRoutes from './hooks/protectedRoutes'
 import { AuthContext } from "./hooks/useAuth"

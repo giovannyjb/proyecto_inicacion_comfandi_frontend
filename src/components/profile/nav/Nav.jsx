@@ -1,7 +1,5 @@
 import { FcHome } from 'react-icons/fc'
 import { BiUserCircle } from 'react-icons/bi'
-import { TbBook } from 'react-icons/tb'
-import { BsFillTelephoneForwardFill } from 'react-icons/bs'
 import {BiMedal} from 'react-icons/bi'
 import { useState } from 'react'
 
@@ -12,7 +10,7 @@ const Nav = () => {
 
     return (
         <nav>
-            <a href="#"
+            <a href="/"
                 onClick={() => setActiveNav('#')}
                 className={activeNav === "#" ? 'active' : ''}
             >
@@ -29,18 +27,6 @@ const Nav = () => {
                 className={activeNav === "#experiences" ? 'active' : ''}
             >
                 <BiMedal></BiMedal>
-            </a>
-            <a href="#services"
-                onClick={() => setActiveNav('#services')}
-                className={activeNav === "#services" ? 'active' : ''}
-            >
-                <TbBook></TbBook>
-            </a>
-            <a href="#contact"
-                onClick={() => setActiveNav('#contact')}
-                className={activeNav === "#contact" ? 'active' : ''}
-            >
-                <BsFillTelephoneForwardFill></BsFillTelephoneForwardFill>
             </a>
         </nav>
     )

@@ -1,10 +1,10 @@
 import React from "react";
 import './about.css'
-import ME from '../../../assets/img/bradpit_about_me.jpg'
+import ME from '../../../assets/img/fondo.jpg'
 import {FaAward} from 'react-icons/fa'
 import{FaUsers} from 'react-icons/fa'
 import {HiFolder} from 'react-icons/hi'
-const App = () => {
+const App = (props) => {
     return (
         <section id="about">
             <h5>Get To know</h5>
@@ -24,28 +24,26 @@ const App = () => {
                         <article className="about__card">
                         <FaAward className="about__icon"></FaAward>
                             <h5>Experience</h5>
-                            <small>3+ Years Working</small>
+                            <small>{props.experience}</small>
                            
                         </article>
 
                         <article className="about__card">
                         <FaUsers className="about__icon"></FaUsers>
                             <h5>Clients</h5>
-                            <small>200+ Worldwide</small>
+                            <small>{props.clients}</small>
                            
                         </article>
 
                         <article className="about__card">
                         <HiFolder className="about__icon"></HiFolder>
                             <h5>Projects</h5>
-                            <small>200+ completed</small>
+                            <small>{props.projects}</small>
                            
                         </article>
 
                     </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                        Doloribus expedita enim sit ullam earum autem dolore laboriosam doloremque 
-                        sunt quas eos ratione reiciendis veritatis, nam omnis quidem, quos neque mollitia.</p>
+                    <p>{props.description}</p>
                         <a  className="btn btn-primary" href="#contact">Let's Talk</a>
 
                 </div>

@@ -10,7 +10,7 @@ const ProtectedRoutes = () => {
    
             <Routes>
                  <Route path='/' element={<Home></Home>} /> 
-                 <Route path='/profile' element={<Profile></Profile>} /> 
+                 <Route path='/profile/:id' element={<Profile></Profile>} /> 
             </Routes>
  
 
